@@ -3,30 +3,37 @@ import AnimatedSection from './AnimatedSection';
 
 const projects = [
   {
-    title: 'Sistem Informasi A',
-    description: 'Deskripsi singkat tentang proyek ini, tujuan dibuatnya, dan hasil yang dicapai. Ini adalah proyek yang menangani manajemen data untuk mempermudah alur kerja.',
-    image: '/images/portfolio/project-a.jpg', // Placeholder
-    tags: ['Laravel', 'MySQL', 'Bootstrap'],
-    liveUrl: '#',
+    title: 'Vibra Library',
+    description: 'Aplikasi Laravel ini adalah sistem manajemen perpustakaan yang mencakup otentikasi pengguna, katalog buku, pengelolaan peminjaman, reservasi, data anggota, dan panel admin.',
+    image: '/images/portfolio/library.jpg', // Placeholder
+    tags: ['Laravel', 'MySQL', 'Tailwind'],
+    liveUrl: null,
     githubUrl: '#',
   },
   {
-    title: 'Website B',
-    description: 'Deskripsi singkat tentang proyek ini. Website modern yang dibuat untuk tujuan komersial dengan fokus pada pengalaman pengguna yang baik.',
-    image: '/images/portfolio/project-b.jpg', // Placeholder
-    tags: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-    liveUrl: '#',
+    title: 'Lestari Belajar',
+    description: 'Lestari Belajar adalah website yang menyediakan info paket kursus (mengemudi, MC, desain), analisis kualitas layanan menggunakan metode Importance Performance Analysis, kuesioner, dan autentikasi pengguna.',
+    image: '/images/portfolio/lestari-belajar.jpg', // Placeholder
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Supabase'],
+    liveUrl: 'https://lestari-belajar.vercel.app',
     githubUrl: '#',
   },
-  {
-    title: 'Aplikasi C',
-    description: 'Deskripsi singkat tentang aplikasi ini. Sebuah aplikasi internal yang membantu dalam mengelola sumber daya dan pelaporan harian.',
-    image: '/images/portfolio/project-c.jpg', // Placeholder
-    tags: ['React', 'Node.js', 'Express'],
-    liveUrl: '#',
+{
+    title: 'Vibra Warkop',
+    description: 'Vibra Warkop adalah sistem manajemen kedai kopi berbasis Laravel yang sistem e-commerce (keranjang belanja, checkout, riwayat pesanan), antarmuka admin POS, integrasi pembayaran Midtrans, serta UI modern dengan animasi dan dark mode.',
+    image: '/images/portfolio/warkop.jpg', // Placeholder
+    tags: ['Laravel', 'MySQL', 'Tailwind'],
+    liveUrl: null,
     githubUrl: '#',
   },
-];
+{
+    title: 'Makkode Landing Page',
+    description: 'Selama masa magang, saya berhasil mengembangkan landing page untuk Makkode, di mana saya berkontribusi aktif sebesar 60% dalam proses pembuatannya.',
+    image: '/images/portfolio/makkode.jpg', // Placeholder
+    tags: ['Laravel', 'React', 'MySQL', 'Tailwind'],
+    liveUrl: 'https://makkode.com/',
+    githubUrl: '#',
+  },]
 
 export default function PortfolioSection() {
   return (
@@ -57,9 +64,12 @@ export default function PortfolioSection() {
                   </div>
                   <p className="text-gray-700 dark:text-gray-400 mb-4 flex-grow">{project.description}</p>
                   <div className="flex justify-between mt-auto">
+                    {
+                       !project.liveUrl? "" : 
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                       Live Demo
                     </a>
+}
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-500">
                       GitHub
                     </a>

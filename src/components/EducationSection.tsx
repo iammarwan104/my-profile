@@ -1,4 +1,14 @@
 import AnimatedSection from "./AnimatedSection";
+import React from 'react';
+import Image from 'next/image';
+import { FaGraduationCap, FaCertificate } from 'react-icons/fa';
+
+// Icon mapping and helper function
+const iconMap = {
+  FaGraduationCap, FaCertificate
+};
+
+const getIconComponent = (iconName) => iconMap[iconName];
 
 const educationData = [
   {
@@ -6,12 +16,16 @@ const educationData = [
     degree: 'S1 Teknik Informatika',
     date: 'Lulus 2025',
     details: 'IPK: 3.6',
+    icon: 'FaGraduationCap',
+    image: '/images/umpar.jpg',
   },
   {
     institution: 'Kelas.Work',
     degree: 'Kursus Online Admin Gudang',
     date: '2025',
     details: 'Mempelajari manajemen stok, alur barang, dan data inventori.',
+    icon: 'FaCertificate',
+    image: '/images/sertifikat.jpg',
   },
 ];
 
@@ -24,11 +38,25 @@ export default function EducationSection() {
             Edukasi & Kursus
           </h2>
         </AnimatedSection>
-        <div className="space-y-8">
+        <div className="md:grid md:grid-cols-2 md:gap-8 md:items-start">
           {educationData.map((edu, index) => (
             <AnimatedSection key={index} delay={index * 150}>
-              <div className="p-6 border-l-4 border-blue-500 bg-gray-50 dark:bg-gray-900 rounded-r-lg">
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{edu.institution}</h3>
+              <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.01] transform transition-all duration-300">
+                {edu.image && (
+                  <div className="mb-4 rounded-lg overflow-hidden">
+                    <Image
+                      src={edu.image}
+                      alt={edu.institution}
+                      width={400}
+                      height={200}
+                      className="w-full object-cover"
+                    />
+                  </div>
+                )}
+                <div className="flex items-center mb-2">
+                  {getIconComponent(edu.icon) && React.createElement(getIconComponent(edu.icon), { className: "mr-3 text-blue-500 text-3xl" })}
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{edu.institution}</h3>
+                </div>
                 <p className="text-lg font-semibold text-gray-600 dark:text-gray-400 mb-2">
                   {edu.degree} | {edu.date}
                 </p>

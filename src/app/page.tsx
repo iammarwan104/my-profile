@@ -8,14 +8,14 @@ import HobbiesSection from "../components/HobbiesSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
-      <SkillsSection />
-      <PortfolioSection />
-      <EducationSection />
-      <HobbiesSection />
+      <SkillsSection />    
+      <PortfolioSection />      
+      <EducationSection /> 
+      <HobbiesSection /> 
     </main>
   );
 }

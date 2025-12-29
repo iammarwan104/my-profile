@@ -41,7 +41,7 @@ export default function AnimatedSection({ children, delay = 0 }: AnimatedSection
     <div
       ref={sectionRef}
       className={`transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
