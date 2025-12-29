@@ -8,9 +8,18 @@ const iconMap = {
   FaGraduationCap, FaCertificate
 };
 
-const getIconComponent = (iconName) => iconMap[iconName];
+const getIconComponent = (iconName: keyof typeof iconMap) => iconMap[iconName];
 
-const educationData = [
+type EducationItem = {
+  institution: string;
+  degree: string;
+  date: string;
+  details: string;
+  icon: keyof typeof iconMap;
+  image: string;
+};
+
+const educationData: EducationItem[] = [
   {
     institution: 'Universitas Muhammadiyah Parepare',
     degree: 'S1 Teknik Informatika',

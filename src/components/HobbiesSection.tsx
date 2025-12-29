@@ -54,16 +54,3 @@ export default function HobbiesSection() {
     </section>
   );
 }
-
-
-
-LestariBelajar#123.
-LestariBelajar#123,
-LestariBelajar_123.
-LestariBelajar_123,
-
-
-
-
-
-

@@ -7,9 +7,22 @@ const iconMap = {
   FaCode, FaShieldAlt, FaBug, FaFileExcel, FaEnvelopeOpenText, FaArchive, FaUserPlus, FaKeyboard, FaChartLine
 };
 
-const getIconComponent = (iconName) => iconMap[iconName];
+const getIconComponent = (iconName: keyof typeof iconMap) => iconMap[iconName];
 
-const experiences = [
+type KeyTask = {
+  text: string;
+  icon: keyof typeof iconMap;
+};
+
+type Experience = {
+  title: string;
+  company: string;
+  date: string;
+  image: string;
+  keyTasks: KeyTask[];
+};
+
+const experiences: Experience[] = [
   {
     title: 'Web Developer - Magang',
     company: 'PT. Makkode Teknologi Kreatif',

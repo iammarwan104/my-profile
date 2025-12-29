@@ -7,9 +7,14 @@ const iconMap = {
   FaLaptopCode, FaDatabase, FaTools
 };
 
-const getIconComponent = (iconName) => iconMap[iconName];
+const getIconComponent = (iconName: keyof typeof iconMap) => iconMap[iconName];
 
-const skills = {
+type SkillCategory = {
+  icon: keyof typeof iconMap;
+  list: string[];
+};
+
+const skills: { [key:string]: SkillCategory } = {
   "Web Development": {
     icon: "FaLaptopCode",
     list: ["HTML", "CSS", "JavaScript", "PHP", "Laravel", "React", "Next.js", "Tailwind CSS", "MySQL"]
