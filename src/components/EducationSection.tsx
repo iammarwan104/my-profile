@@ -40,14 +40,14 @@ const educationData: EducationItem[] = [
 
 export default function EducationSection() {
   return (
-    <section id="education" className="py-20 px-4 bg-white dark:bg-gray-800">
+    <section id="education" className="py-20 px-4 md:px-0 bg-white dark:bg-gray-800">
       <div className="container mx-auto max-w-4xl">
         <AnimatedSection>
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
             Edukasi & Kursus
           </h2>
         </AnimatedSection>
-        <div className="md:grid md:grid-cols-2 md:gap-8 md:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 md:items-start">
           {educationData.map((edu, index) => (
             <AnimatedSection key={index} delay={index * 150}>
               <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.01] transform transition-all duration-300">

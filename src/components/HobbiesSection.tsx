@@ -19,7 +19,7 @@ const hobbies = [
 
 export default function HobbiesSection() {
   return (
-    <section id="hobbies" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+    <section id="hobbies" className="py-20 px-4 md:px-0 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto max-w-4xl">
         <AnimatedSection>
             <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">

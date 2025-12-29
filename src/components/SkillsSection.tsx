@@ -31,7 +31,7 @@ const skills: { [key:string]: SkillCategory } = {
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 px-4 bg-white dark:bg-gray-800">
+    <section id="skills" className="py-20 px-4 md:px-0 bg-white dark:bg-gray-800">
       <div className="container mx-auto max-w-4xl">
         <AnimatedSection>
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">

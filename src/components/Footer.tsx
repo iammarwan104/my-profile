@@ -1,10 +1,11 @@
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://linkedin.com/in/marwan-mansur-a7a9a8267' },
     { icon: FaGithub, href: 'https://github.com/Marwan-Mansur' }, // Please update this
     { icon: FaEnvelope, href: 'mailto:marwahpinrang6@gmail.com' },
+    { icon: FaWhatsapp, href: 'https://wa.me/6282347824914' },
   ];
 
   return (

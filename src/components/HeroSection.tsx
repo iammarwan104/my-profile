@@ -5,9 +5,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center bg-gray-50 dark:bg-gray-900 overflow-hidden">
-      
-
+    <section id="home" className="px-4 md:px-0 relative flex min-h-screen items-center bg-gray-50 dark:bg-gray-900 overflow-hidden">
         <div className="md:h-screen md:w-screen flex flex-col-reverse md:flex-row items-center md:items-center justify-between gap-0 md:gap-12">
           {/* Left Column (Text Content) */}
           <div className="md:w-1/2 text-center md:text-left py-12 md:py-0 md:ml-16 z-10">

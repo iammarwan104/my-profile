@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 px-4 bg-white dark:bg-gray-800 rounded-t-[2rem] lg:rounded-t-[4rem]">
+    <section id="about" className="py-20 px-4 md:px-0 bg-white dark:bg-gray-800 rounded-t-[2rem] lg:rounded-t-[4rem]">
       <div className="container mx-auto max-w-6xl">
 
          <AnimatedSection>
@@ -32,7 +32,7 @@ export default function AboutSection() {
             Tentang Saya
           </h2>
         </AnimatedSection>
-          <AnimatedSection delay={200} className="w-full md:w-1/3">
+          <AnimatedSection delay={200} className="w-full">
               <p className="mb-4">Mari mengenal saya lebih dekat melalui keahlian dan pengalaman berikut:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Lulusan Teknik Informatika dengan IPK 3.6.</li>
